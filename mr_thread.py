@@ -97,18 +97,18 @@ class MR_Thread (threading.Thread):
         self.arg = {'name' : name,
                     'data' : None}
         testF = open('/cc/testf.txt', 'w')
-        testF.write(str(self.arg['name']) + ' : \n')
+        testF.write(str(self.arg['name']) + ' : '+ func + '\n')
         testF.close()
 
         tmp_file = open(name + "tmp.txt", "r")
 
         if func == "map":
             self.func = map_func
-            self.arg.data = tmp_file.read()
+            self.arg['data'] = tmp_file.read()
         elif func == "reduce":
             self.func = reduce_func
             with tmp_file as f:
-                self.arg.data = pickle.load(f)
+                self.arg['data'] = pickle.load(f)
 
         tmp_file.close()
         os.remove('/cc/' + name + "tmp.txt")
