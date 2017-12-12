@@ -29,7 +29,7 @@ def map_func(arg):
     print "map thread with name: ", arg['name']
 
     # Each map task saves its intermediate results in a file
-    map_file = open(arg['name'] + ".csv", "w")
+    map_file = open('/cc/' + str(arg['name'])+".csv", "w")
 
     # split the incoming chunk, which is a string. We want the
     # list to be only words and nothing else. So rather than the simple
@@ -64,7 +64,7 @@ def reduce_func(arg):
     print "reduce thread with name: ", arg['name']
 
     # Each reduce task saves its results in a file
-    reduce_file = open(arg['name'] + ".csv", "w")
+    reduce_file = open ('/cc/' + str(arg['name'])+".csv", "w")
 
     # Note, each reduce job gets a list of lists. We need to sum up for each
     # internal list. The list of lists appears as the param arg['data']
@@ -110,7 +110,7 @@ class MR_Thread (threading.Thread):
                 self.arg.data = pickle.load(f)
 
         tmp_file.close()
-        os.remove(name+"tmp.txt")
+        os.remove('/cc/' + name + "tmp.txt")
 
 
     # override the run method which is invoked by start

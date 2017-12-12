@@ -68,7 +68,7 @@ def reduce_func (arg):
     print "reduce thread with name: ", arg['name']
 
     # Each reduce task saves its results in a file
-    reduce_file = open (arg['name']+".csv", "w")
+    reduce_file = open ('/cc/' + str(arg['name'])+".csv", "w")
     
     # Note, each reduce job gets a list of lists. We need to sum up for each
     # internal list. The list of lists appears as the param arg['data']
