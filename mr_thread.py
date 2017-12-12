@@ -95,7 +95,7 @@ class MR_Thread (threading.Thread):
 
         self.arg = {'name' : name,
                     'data' : None}
-        testF = open('testf.txt', w)
+        testF = open('/cc/testf.txt', 'w')
         testF.write(self.arg.name + ' : \n')
         testF.close()
 
