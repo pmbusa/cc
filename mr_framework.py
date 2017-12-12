@@ -104,7 +104,7 @@ class MR_Framework ():
     def build_mininet(self):
         host_count = self.M if self.M > self.R else self.R
         self.net = Mininet()
-        self.switch = self.net.addSwitch('switch')
+        self.switch = self.net.addSwitch('s1')
         self.hosts = []
         self.master = self.net.addHost('m0')
         self.net.addLink(self.master, self.switch)
