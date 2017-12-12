@@ -26,6 +26,7 @@ from mininet.link import *
 from mininet.log import  setLogLevel, info
 from threading import Timer
 
+import pickle
 
 # ------------------------------------------------
 def map_func (arg):
@@ -312,23 +313,25 @@ class MR_Framework ():
 
                     # save file for access from mininet
                     tmp_file = open("Reduce" + str(i) + "tmp.txt", "w")
-                    tmp_file.write(self.groups[start_index:])
+                    with tmp_file as f:
+                        pickle.dump(self.groups[start_index:], f)
                     tmp_file.close()
 
                     # execute
                     hosts.append(self.hosts[i])
-                    self.host[i].sendCmd('python /cc/mr_thread.py Reduce'+str(i)+' reduce')
+                    self.hosts[i].sendCmd('python /cc/mr_thread.py Reduce'+str(i)+' reduce')
 
                 else:
                     # thr = MR_Thread ("Reduce"+str(i), reduce_func, self.groups[start_index:range_len])
 
                     # save file for access from mininet
                     tmp_file = open("Reduce" + str(i) + "tmp.txt", "w")
-                    tmp_file.write(str(self.groups[start_index:range_len]))
+                    with tmp_file as f:
+                        pickle.dump(self.groups[start_index:range_len], f)
                     tmp_file.close()
 
                     hosts.append(self.hosts[i])
-                    self.host[i].sendCmd('python /cc/mr_thread.py Reduce'+str(i)+' reduce')
+                    self.hosts[i].sendCmd('python /cc/mr_thread.py Reduce'+str(i)+' reduce')
 
 
 

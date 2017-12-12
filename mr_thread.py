@@ -21,6 +21,7 @@ import itertools   # nice iterators
 # shared data structure and threading
 import threading
 
+import pickle
 
 # ------------------------------------------------
 def map_func(arg):
@@ -91,14 +92,20 @@ class MR_Thread (threading.Thread):
     # constructor
     def __init__ (self, name, func):
         threading.Thread.__init__(self)
-        if func == "map":
-            self.func = map_func
-        elif func == "reduce":
-            self.func = reduce_func
-        tmp_file = open(name + "tmp.txt", "r")
 
         self.arg = {'name' : name,
-                    'data' : tmp_file.read()}
+                    'data' : None}
+
+        tmp_file = open(name + "tmp.txt", "r")
+
+        if func == "map":
+            self.func = map_func
+            self.arg.data = tmp_file.read()
+        elif func == "reduce":
+            self.func = reduce_func
+            with tmp_file as f:
+                self.arg.data = pickle.load(f)
+
         tmp_file.close()
         os.remove(name+"tmp.txt")
 
