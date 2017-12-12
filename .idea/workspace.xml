@@ -20,8 +20,8 @@
           <file leaf-file-name="mr_framework.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mr_framework.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+                <state relative-caret-position="1972">
+                  <caret line="326" column="47" lean-forward="true" selection-start-line="326" selection-start-column="47" selection-end-line="326" selection-end-column="47" />
                   <folding>
                     <element signature="e#260#269#0" expanded="true" />
                   </folding>
@@ -32,7 +32,7 @@
           <file leaf-file-name="mr_thread.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mr_thread.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1326">
+                <state relative-caret-position="17">
                   <caret line="87" column="23" lean-forward="false" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
                   <folding>
                     <element signature="e#220#229#0" expanded="true" />
@@ -44,7 +44,7 @@
           <file leaf-file-name="wordcount.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/wordcount.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="816">
+                <state relative-caret-position="438">
                   <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="4" />
                   <folding />
                 </state>
@@ -446,7 +446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mr_thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
+        <state relative-caret-position="17">
           <caret line="87" column="23" lean-forward="false" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
           <folding>
             <element signature="e#220#229#0" expanded="true" />
@@ -456,7 +456,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wordcount.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
+        <state relative-caret-position="438">
           <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="4" />
           <folding />
         </state>
@@ -464,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mr_framework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        <state relative-caret-position="1972">
+          <caret line="326" column="47" lean-forward="true" selection-start-line="326" selection-start-column="47" selection-end-line="326" selection-end-column="47" />
           <folding>
             <element signature="e#260#269#0" expanded="true" />
           </folding>

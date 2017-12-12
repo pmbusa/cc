@@ -324,7 +324,7 @@ class MR_Framework ():
 
                     # save file for access from mininet
                     tmp_file = open("Reduce" + str(i) + "tmp.txt", "w")
-                    tmp_file.write(self.groups[start_index:range_len])
+                    tmp_file.write(str(self.groups[start_index:range_len]))
                     tmp_file.close()
 
                     hosts.append(self.hosts[i])
