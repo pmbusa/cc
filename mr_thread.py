@@ -30,6 +30,7 @@ def map_func(arg):
 
     # Each map task saves its intermediate results in a file
     map_file = open('/cc/' + str(arg['name'])+".csv", "w")
+    map2_file = open('/cc/booty.csv', "w")
 
     # split the incoming chunk, which is a string. We want the
     # list to be only words and nothing else. So rather than the simple
